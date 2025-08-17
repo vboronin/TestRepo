@@ -1,0 +1,48 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-create-users-and-authorities
+      author: ai
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  type: varchar(50)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: enabled
+                  type: boolean
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: authorities
+            columns:
+              - column:
+                  name: username
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: authority
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+        - addPrimaryKey:
+            tableName: authorities
+            columnNames: username, authority
+            constraintName: pk_authorities
+        - addForeignKeyConstraint:
+            baseTableName: authorities
+            baseColumnNames: username
+            referencedTableName: users
+            referencedColumnNames: username
+            constraintName: fk_authorities_users
+            onDelete: CASCADE

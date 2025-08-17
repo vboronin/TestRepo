@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: classpath:db/changelog/changes/001-create-users-and-authorities.yaml
+  - include:
+      file: classpath:db/changelog/changes/002-insert-initial-users.yaml
