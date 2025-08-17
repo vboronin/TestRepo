@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-insert-initial-users
+      author: ai
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column: { name: username, value: user }
+              - column: { name: password, value: '{noop}password' }
+              - column: { name: enabled, valueBoolean: true }
+        - insert:
+            tableName: authorities
+            columns:
+              - column: { name: username, value: user }
+              - column: { name: authority, value: ROLE_USER }
+        - insert:
+            tableName: users
+            columns:
+              - column: { name: username, value: admin }
+              - column: { name: password, value: '{noop}admin' }
+              - column: { name: enabled, valueBoolean: true }
+        - insert:
+            tableName: authorities
+            columns:
+              - column: { name: username, value: admin }
+              - column: { name: authority, value: ROLE_ADMIN }
