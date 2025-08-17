@@ -1,0 +1,8 @@
+com/example/securitydb/user/RoleEntity.class
+com/example/securitydb/web/HelloController.class
+com/example/securitydb/user/UserEntity.class
+com/example/securitydb/config/SecurityConfig.class
+com/example/securitydb/user/UserRepository.class
+com/example/securitydb/user/RoleRepository.class
+com/example/securitydb/SecurityDbApplication.class
+com/example/securitydb/security/DatabaseUserDetailsService.class

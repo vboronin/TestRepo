@@ -1,0 +1,8 @@
+/workspace/src/main/java/com/example/securitydb/SecurityDbApplication.java
+/workspace/src/main/java/com/example/securitydb/config/SecurityConfig.java
+/workspace/src/main/java/com/example/securitydb/security/DatabaseUserDetailsService.java
+/workspace/src/main/java/com/example/securitydb/user/RoleEntity.java
+/workspace/src/main/java/com/example/securitydb/user/RoleRepository.java
+/workspace/src/main/java/com/example/securitydb/user/UserEntity.java
+/workspace/src/main/java/com/example/securitydb/user/UserRepository.java
+/workspace/src/main/java/com/example/securitydb/web/HelloController.java
